@@ -8,15 +8,17 @@ interface CurrencyRow {
  
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 const ROWS: CurrencyRow[] = [
-  { flag: '/AUD.png', code: 'AUD', surrender: '1.4894', buy: '1.4383', course: '1.4602', change: '0.0000' },
-  { flag: '/BGN.png', code: 'BGN', surrender: '1.6983', buy: '1.6400', course: '1.6650', change: '0.0000' },
-  { flag: '/BRL.png', code: 'BRL', surrender: '5.3492', buy: '5.1656', course: '5.2443', change: '0.0000' },
-  { flag: '/CAD.png', code: 'CAD', surrender: '1.4179', buy: '1.3693', course: '1.3901', change: '0.0000' },
-  { flag: '/CHF.png', code: 'CHF', surrender: '0.8159', buy: '0.7879', course: '0.7999', change: '0.0000' },
-  { flag: '/EUR.png', code: 'EUR', surrender: '0.8878', buy: '0.8573', course: '0.8704', change: '0.0000' },
-  { flag: '/GBP.png', code: 'GBP', surrender: '0.7707', buy: '0.7442', course: '0.7556', change: '0.0000' },
-  { flag: '/JPY.png', code: 'JPY', surrender: '163.4887', buy: '157.8788', course: '160.2830', change: '0.0000' },
+  { flag: `${BASE}AUD.png`, code: 'AUD', surrender: '1.4894', buy: '1.4383', course: '1.4602', change: '0.0000' },
+  { flag: `${BASE}BGN.png`, code: 'BGN', surrender: '1.6983', buy: '1.6400', course: '1.6650', change: '0.0000' },
+  { flag: `${BASE}BRL.png`, code: 'BRL', surrender: '5.3492', buy: '5.1656', course: '5.2443', change: '0.0000' },
+  { flag: `${BASE}CAD.png`, code: 'CAD', surrender: '1.4179', buy: '1.3693', course: '1.3901', change: '0.0000' },
+  { flag: `${BASE}CHF.png`, code: 'CHF', surrender: '0.8159', buy: '0.7879', course: '0.7999', change: '0.0000' },
+  { flag: `${BASE}EUR.png`, code: 'EUR', surrender: '0.8878', buy: '0.8573', course: '0.8704', change: '0.0000' },
+  { flag: `${BASE}GBP.png`, code: 'GBP', surrender: '0.7707', buy: '0.7442', course: '0.7556', change: '0.0000' },
+  { flag: `${BASE}JPY.png`, code: 'JPY', surrender: '163.4887', buy: '157.8788', course: '160.2830', change: '0.0000' },
 ];
 
 const HEADERS = ['Currency', 'Surrender', 'Buy', 'Course', 'Change', 'Time'];

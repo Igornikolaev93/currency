@@ -96,10 +96,6 @@ export function LoginPage() {
         <Button type="submit" loading={loading}>
           Login
         </Button>
-
-        <div style={{ color: '#8E93A1', fontSize: 12, textAlign: 'center' }}>
-          Демо: user@example.com / password123
-        </div>
       </form>
     </div>
   );

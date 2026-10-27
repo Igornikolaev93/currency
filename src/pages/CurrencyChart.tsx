@@ -1,12 +1,14 @@
+const BASE = import.meta.env.BASE_URL;
+
 const FLAGS: Record<string, string> = {
-  AUD: '/AUD.png',
-  BGN: '/BGN.png',
-  BRL: '/BRL.png',
-  CAD: '/CAD.png',
-  CHF: '/CHF.png',
-  EUR: '/EUR.png',
-  GBP: '/GBP.png',
-  JPY: '/JPY.png',
+  AUD: `${BASE}AUD.png`,
+  BGN: `${BASE}BGN.png`,
+  BRL: `${BASE}BRL.png`,
+  CAD: `${BASE}CAD.png`,
+  CHF: `${BASE}CHF.png`,
+  EUR: `${BASE}EUR.png`,
+  GBP: `${BASE}GBP.png`,
+  JPY: `${BASE}JPY.png`,
 };
 
 const BASE_PRICES: Record<string, number> = {

@@ -19,15 +19,17 @@ interface CurrencyRow {
   time: string;
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 const CURRENCIES: { code: string; flag: string }[] = [
-  { code: 'AUD', flag: '/AUD.png' },
-  { code: 'BGN', flag: '/BGN.png' },
-  { code: 'BRL', flag: '/BRL.png' },
-  { code: 'CAD', flag: '/CAD.png' },
-  { code: 'CHF', flag: '/CHF.png' },
-  { code: 'EUR', flag: '/EUR.png' },
-  { code: 'GBP', flag: '/GBP.png' },
-  { code: 'JPY', flag: '/JPY.png' },
+  { code: 'AUD', flag: `${BASE}AUD.png` },
+  { code: 'BGN', flag: `${BASE}BGN.png` },
+  { code: 'BRL', flag: `${BASE}BRL.png` },
+  { code: 'CAD', flag: `${BASE}CAD.png` },
+  { code: 'CHF', flag: `${BASE}CHF.png` },
+  { code: 'EUR', flag: `${BASE}EUR.png` },
+  { code: 'GBP', flag: `${BASE}GBP.png` },
+  { code: 'JPY', flag: `${BASE}JPY.png` },
 ];
 
 export function CurrenciesPage() {

@@ -6,6 +6,8 @@ interface Props {
   activeItem?: 'rates' | 'cards';
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 export function Sidebar({ activeItem = 'rates' }: Props) {
   const { logout } = useAuth();
   const navigate = useNavigate();
@@ -19,7 +21,7 @@ export function Sidebar({ activeItem = 'rates' }: Props) {
     <aside className="sidebar">
       <div className="sidebar__logo">
         <div className="sidebar__logo-emoji">
-          <img src="/gold.png" alt="gold"  />
+           <img src={`${BASE}gold.png`} alt="gold" />
         </div>
         <div className="sidebar__logo-title">Dashboard</div>
       </div>
@@ -34,7 +36,7 @@ export function Sidebar({ activeItem = 'rates' }: Props) {
         onClick={() => navigate('/dashboard')}
       >
         <div className="sidebar__item-icon">
-          <img src="/val.png" alt="val"  />
+          <img src={`${BASE}val.png`} alt="rates" />
         </div>
         <div className="sidebar__item-text">Exchange Rates</div>
       </div>
@@ -44,7 +46,7 @@ export function Sidebar({ activeItem = 'rates' }: Props) {
         onClick={() => navigate('/cards')}
       >
         <div className="sidebar__item-icon">
-          <img src="/card.png" alt="card"  />
+          <img src={`${BASE}card.png`} alt="cards" />
         </div>
         <div className="sidebar__item-text">Kanban Cards</div>
       </div>
@@ -56,7 +58,7 @@ export function Sidebar({ activeItem = 'rates' }: Props) {
 
       <div className="sidebar__logout" onClick={handleLogout}>
         <div className="sidebar__logout-icon">
-          <img src="/door.png" alt="door"  />
+          <img src={`${BASE}door.png`} alt="logout" />
         </div>
         <div className="sidebar__logout-text">Logout</div>
       </div>

@@ -1,17 +1,24 @@
 # Currency Dashboard
 
-SPA на React + TypeScript + Vite. Авторизация, таблица курсов валют, график динамики, Kanban-карточки.
+SPA для работы с курсами валют и Kanban-карточками. React + TypeScript + Vite, mock-авторизация, SVG-график, deploy на GitHub Pages.
 
 ## Демо
 
-https://igornikolaev93.github.io/currency/
+**https://igornikolaev93.github.io/currency/**
 
-Тестовый вход:
-- `user@example.com` / `password123`
-- `admin@example.com` / `admin123`
+Тестовые учётные записи:
+- `user@example.com` / `password123` — обычный пользователь
+- `admin@example.com` / `admin123` — администратор
 
-## Запуск
+## Быстрый старт
 
 ```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/Igornikolaev93/currency.git
+cd currency
+
+# 2. Установить зависимости
 npm install
-npm run dev# currency
+
+# 3. Запустить dev-сервер
+npm run dev

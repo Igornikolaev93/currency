@@ -4,6 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
+const BASE = import.meta.env.BASE_URL;
+
 export function LoginPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -72,7 +74,7 @@ export function LoginPage() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <Input
-            icon="/letter.png"
+            icon={`${BASE}letter.png`}
             type="email"
             placeholder="Email Address"
             value={email}
@@ -81,7 +83,7 @@ export function LoginPage() {
             autoComplete="email"
           />
           <Input
-            icon="/lock.png"
+            icon={`${BASE}lock.png`}
             type="password"
             placeholder="Password"
             value={password}

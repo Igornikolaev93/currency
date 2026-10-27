@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './Sidebar.css';
+import './Sidebar';
 
 interface Props {
   activeItem?: 'rates' | 'cards';

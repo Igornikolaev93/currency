@@ -1,0 +1,243 @@
+/* ============ Корневой сайдбар ============ */
+.sidebar {
+  flex-shrink: 0;
+  width: 72px;
+  align-self: stretch;
+  padding: 20px 10px;
+  background: #ffffff;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
+  transition:
+    width 0.25s ease,
+    padding 0.25s ease,
+    align-items 0.25s ease,
+    gap 0.25s ease,
+    box-shadow 0.25s ease;
+  z-index: 10;
+}
+
+.sidebar:hover {
+  width: 240px;
+  padding: 24px 20px;
+  align-items: flex-start;
+  gap: 4px;
+  box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============ Логотип / заголовок ============ */
+.sidebar__logo {
+  align-self: stretch;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  transition: height 0.25s ease, gap 0.25s ease, padding 0.25s ease,
+    justify-content 0.25s ease;
+}
+.sidebar:hover .sidebar__logo {
+  height: auto;
+  gap: 10px;
+  padding-bottom: 16px;
+  justify-content: flex-start;
+}
+
+.sidebar__logo-emoji {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: font-size 0.25s ease;
+}
+.sidebar:hover .sidebar__logo-emoji {
+  font-size: 28px;
+}
+
+.sidebar__logo-title {
+  color: #18184c;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease 0.05s, max-width 0.25s ease;
+}
+.sidebar:hover .sidebar__logo-title {
+  opacity: 1;
+  max-width: 200px;
+}
+
+/* ============ Разделители ============ */
+.sidebar__divider {
+  align-self: stretch;
+  height: 1px;
+  background: #e3e4ea;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.2s ease 0.05s, max-height 0.25s ease;
+}
+.sidebar:hover .sidebar__divider {
+  opacity: 1;
+  max-height: 1px;
+}
+
+/* ============ Распорки (12 / 4 / 8 px) ============ */
+.sidebar__spacer-12,
+.sidebar__spacer-4,
+.sidebar__spacer-8 {
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+.sidebar:hover .sidebar__spacer-12 { max-height: 12px; }
+.sidebar:hover .sidebar__spacer-4  { max-height: 4px;  }
+.sidebar:hover .sidebar__spacer-8  { max-height: 8px;  }
+
+/* ============ Подпись MENU ============ */
+.sidebar__label {
+  color: #8e93a1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  white-space: nowrap;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease 0.05s, max-height 0.25s ease;
+}
+.sidebar:hover .sidebar__label {
+  opacity: 1;
+  max-height: 16px;
+}
+
+/* ============ Пункты меню ============ */
+.sidebar__item {
+  align-self: stretch;
+  padding: 10px 0;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  background: transparent;
+  transition:
+    background 0.15s ease,
+    padding 0.25s ease,
+    gap 0.25s ease,
+    flex-direction 0.15s ease;
+}
+.sidebar:hover .sidebar__item {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 12px;
+}
+
+.sidebar__item-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: font-size 0.25s ease;
+}
+.sidebar:hover .sidebar__item-icon {
+  font-size: 20px;
+}
+
+.sidebar__item-text {
+  color: #8e93a1;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: font-size 0.25s ease, color 0.15s ease, font-weight 0.15s ease;
+}
+.sidebar:hover .sidebar__item-text {
+  font-size: 15px;
+}
+
+/* Активный пункт */
+.sidebar__item--active {
+  background: #e7eeff;
+}
+.sidebar__item--active .sidebar__item-text {
+  color: #2563eb;
+  font-weight: 600;
+}
+.sidebar:hover .sidebar__item:not(.sidebar__item--active) .sidebar__item-text {
+  color: #18184c;
+  font-weight: 500;
+}
+
+/* Hover на самих пунктах */
+.sidebar__item:hover {
+  background: #f3f6fc;
+}
+.sidebar__item--active:hover {
+  background: #e7eeff;
+}
+
+/* ============ Пружина ============ */
+.sidebar__grow {
+  width: 52px;
+  flex: 1;
+}
+
+/* ============ Logout ============ */
+.sidebar__logout {
+  align-self: stretch;
+  padding: 10px 0;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    padding 0.25s ease,
+    gap 0.25s ease,
+    flex-direction 0.15s ease;
+}
+.sidebar:hover .sidebar__logout {
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 12px 14px;
+  gap: 12px;
+}
+.sidebar__logout:hover {
+  background: #fff2f2;
+}
+
+.sidebar__logout-icon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: font-size 0.25s ease;
+}
+.sidebar:hover .sidebar__logout-icon {
+  font-size: 20px;
+}
+
+.sidebar__logout-text {
+  color: #8e93a1;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.15s ease, font-size 0.25s ease;
+}
+.sidebar:hover .sidebar__logout-text {
+  color: #ea3a3a;
+  font-size: 15px;
+}

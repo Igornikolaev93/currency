@@ -8,7 +8,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ icon, error, ...props }, ref) => {
     const hasError = Boolean(error);
-    const isImage = typeof icon === 'string' && icon.startsWith('/');
+    //const isImage = typeof icon === 'string' && icon.startsWith('/');
+    const isImage = /\.(png|svg|jpe?g|gif|webp|avif)$/i.test(icon);
 
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>

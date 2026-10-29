@@ -55,7 +55,7 @@ export function LoginPage() {
 
   return (
     <div style={pageStyle}>
-      <form onSubmit={handleSubmit} style={cardStyle}>
+      <form onSubmit={handleSubmit} style={cardStyle} className="login-card">
         <div
           style={{
             display: 'flex',

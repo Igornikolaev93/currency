@@ -241,3 +241,46 @@
   color: #ea3a3a;
   font-size: 15px;
 }
+
+/**/
+@media (max-width: 767px) {
+  .sidebar {
+    width: 56px;
+    padding: 16px 8px;
+  }
+  .sidebar:hover {
+    width: 56px;
+    padding: 16px 8px;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  }
+  .sidebar:hover .sidebar__logo {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  .sidebar:hover .sidebar__logo-title,
+  .sidebar:hover .sidebar__label,
+  .sidebar:hover .sidebar__divider,
+  .sidebar:hover .sidebar__spacer-12,
+  .sidebar:hover .sidebar__spacer-4,
+  .sidebar:hover .sidebar__spacer-8 {
+    display: none;
+  }
+  .sidebar:hover .sidebar__item,
+  .sidebar:hover .sidebar__logout {
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 4px;
+    justify-content: center;
+  }
+  .sidebar:hover .sidebar__item-text,
+  .sidebar:hover .sidebar__logout-text {
+    font-size: 10px;
+  }
+  .sidebar:hover .sidebar__item-icon {
+    font-size: 22px;
+  }
+  .sidebar__grow {
+    width: 100%;
+  }
+}

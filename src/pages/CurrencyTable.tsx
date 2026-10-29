@@ -73,16 +73,18 @@ export function CurrencyTable({ onSelect, selectedCode }: Props) {
       </div>
 
       {/* Таблица */}
-      <div
-        style={{
+      <div 
+      style={{
           background: 'white',
           boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.04)',
           borderRadius: 20,
-          padding: '4px 20px',
+          padding: '4px 0',
           minWidth: 0,
           overflow: 'hidden',
         }}
       >
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', padding: '0 20px' }}>
+        <div style={{ minWidth: 600}}>
         {/* Header */}
         <div style={{ display: 'flex', padding: 12, alignItems: 'center' }}>
           {HEADERS.map((h) => (
@@ -90,6 +92,7 @@ export function CurrencyTable({ onSelect, selectedCode }: Props) {
               key={h}
               style={{
                 flex: 1,
+                minWidth: 90,
                 color: '#8E93A1',
                 fontSize: 12,
                 fontWeight: 500,
@@ -102,12 +105,13 @@ export function CurrencyTable({ onSelect, selectedCode }: Props) {
             </div>
           ))}
         </div>
-
+        
         {/* Rows */}
         {ROWS.map((r) => {
           const active = r.code === selectedCode;
           const cellStyle: React.CSSProperties = {
             flex: 1,
+            minWidth: 90,
             color: '#18184C',
             fontSize: 14,
             whiteSpace: 'nowrap',
@@ -159,6 +163,8 @@ export function CurrencyTable({ onSelect, selectedCode }: Props) {
           );
         })}
         <div style={{ height: 1, background: '#E3E4EA' }} />
+        </div>
+        </div>
       </div>
     </div>
   );

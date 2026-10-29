@@ -12,7 +12,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const isImage = /\.(png|svg|jpe?g|gif|webp|avif)$/i.test(icon);
 
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: '100%', maxWidth: 340  }}>
         <div
           style={{
             width: 340,

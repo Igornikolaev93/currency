@@ -50,7 +50,7 @@ const toggle = (code: string) => {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', background: '#EFEFF4' }}>
       <Sidebar activeItem="rates" />
-      <main
+      <main  className="dashboard-main"
         style={{
           flex: 1,
           minWidth: 0,
@@ -59,18 +59,18 @@ const toggle = (code: string) => {
           display: 'flex',
           gap: 20,
           alignItems: 'flex-start',
-          overflow: 'hidden',
+          overflow: 'visible',
         }}
       >
        <CurrencyTable onSelect={toggle} selectedCode={selectedCode} />
      <div
-  style={{
-    width: selectedCode ? 420 : 0,
-    flexShrink: 0,
-    overflow: 'hidden',
-    transition: 'width 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
-  }}
->
+      style={{
+        width: selectedCode ? 420 : 0,
+        flexShrink: 0,
+        overflow: 'hidden',
+        transition: 'width 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
+      }}
+    >
   <div
     ref={chartRef}
     style={{

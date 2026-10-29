@@ -6,11 +6,13 @@ import { LoginPage } from './pages/LoginPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { KanbanPage } from './pages/KanbanPage';
+import './index.css';
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route
             path="/login"

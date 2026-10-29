@@ -203,7 +203,7 @@ export function KanbanPage() {
           flexDirection: 'column',
           gap: 20,
           fontFamily: 'Inter, sans-serif',
-          overflow: 'auto',
+          overflow: 'visible',
         }}
       >
         {mode === 'preview' ? (
@@ -278,7 +278,7 @@ function FormView({
         Create New Card
       </h1>
 
-      <div
+      <div className="kanban-form"
         style={{
           background: 'white',
           boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.04)',
@@ -516,7 +516,7 @@ function FormView({
         </div>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12 }}>
+      <div className="kanban-buttons" style={{ display: 'flex', justifyContent: 'flex-end', gap: 12 }}>
         <button onClick={onCancel} style={cancelBtnStyle}>Cancel</button>
         <button onClick={onSubmit} style={primaryBtnStyle}>{submitLabel}</button>
       </div>

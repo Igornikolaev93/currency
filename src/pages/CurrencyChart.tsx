@@ -64,8 +64,9 @@ export function CurrencyChart({ code = 'EUR' }: Props) {
   return (
     <div
       style={{
-        width: 420,          
-        minWidth: 420,       
+        width: '100%',
+        maxWidth: 420,          
+        minWidth: 0,       
         padding: 24,
         background: 'white',
         boxShadow: '0px 2px 12px rgba(0, 0, 0, 0.04)',
